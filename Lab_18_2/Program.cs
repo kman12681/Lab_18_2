@@ -30,12 +30,13 @@ namespace Lab_18_2
             for (int i = 0; i < array.Length; i++)
             {
                 list.AddToEnd(array[i]);
+                Console.WriteLine($"{array[i]}: {list.CountOccurences()}");
             }
-            
-            list.CountOccurences();
 
 
-            //list.PrintAllNodes();         
+
+
+                     
 
 
 

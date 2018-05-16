@@ -19,24 +19,20 @@ namespace Lab_18_2
             Count = 0;
         }
 
-        public void CountOccurences()
+        public int CountOccurences()
         {
-            Node thisNode = head;
 
+            Node thisNode = head;
             while (thisNode != null)
             {
-                Console.WriteLine(thisNode.Value);
-                thisNode = thisNode.Next;
                 if (thisNode.Value == thisNode.Next.Value)
                 {
                     Count++;
                 }
-                else
-                {
-                    thisNode = thisNode.Next;
-                }
             }
-            Console.WriteLine(Count);
+            return Count;
+
+
         }
 
         public void AddAtStart(object data)
@@ -119,7 +115,7 @@ namespace Lab_18_2
             }
         }
 
-        
+
     }
 
 
