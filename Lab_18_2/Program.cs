@@ -10,41 +10,33 @@ namespace Lab_18_2
     {
         static void Main(string[] args)
         {
-            // Algorithm
-            //TODO: make this better.. and correct!
+            // Algorithm            
 
             //1. START
-            //2. declare an integer array called array            
-            //3. initialize a LinkedList called list
-            //4 .sort array
-            //5. add each index of array to list
-            //6. check if next node in list is equal to previous node and increment count if true
-            //7. when next node is not equal to previous node, start count over
-            //8. print number of occurrences
-
-            LinkedList list = new LinkedList();
+            //2. declare an integer array called array and fill with values          
+            //3. declare an integer array called count and set its size to the max value of array + 1. Do not fill in values.
+            //4. check each index of array and increment its corresponding index in count array at each occurence
+            //5. declare an int variable called counter and set to 0
+            //6. Iterate through count array, printing the counter and index, incrementing the counter at each iteration          
             
-            int[] array = { 2, 4, 6, 3, 2, 5, 4, 2, 3 };
-            Array.Sort(array, 0, array.Length);
+            int[] array = { 2, 4, 6, 3, 2, 5, 7000, 4, 2, 3 };
+            int[] count = new int[array.Max() + 1];
 
             for (int i = 0; i < array.Length; i++)
             {
-                list.AddToEnd(array[i]);
-                Console.WriteLine($"{array[i]}: {list.CountOccurences()}");
+                count[array[i]]++;
             }
 
+            int counter = 0;
 
-
-
-                     
-
-
-
-
-
-
-
+            foreach (int c in count)
+            {
+                if (c != 0)
+                {
+                    Console.WriteLine($"{counter}:{c}");
+                }
+                counter++;
+            }
         }
     }
-
 }
